@@ -1,5 +1,7 @@
 from flask import Flask, render_template, redirect, flash, request
 import jinja2
+import melons
+
 
 app = Flask(__name__)
 app.jinja_env.undefined = jinja2.StrictUndefined 
@@ -15,7 +17,8 @@ def all_melons():
 
 @app.route("/melon/<melon_id>")
 def melon_details(melon_id):
-    return render_template("melon_details.html")
+    melon = melons.get_by_id(melon_id)
+    return render_template("melon_details.html", melon=melon)
 
 @app.route("/add_to_cart/<melon_id>")
 def add_to_cart(melon_id):
