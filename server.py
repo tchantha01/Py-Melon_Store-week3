@@ -57,7 +57,7 @@ def melon_details(melon_id):
 @app.route("/add_to_cart/<melon_id>")
 def add_to_cart(melon_id):
     
-    if 'username' in session:
+    if 'username' not in session:
         return redirect('/login')
     
     if "cart" not in session:

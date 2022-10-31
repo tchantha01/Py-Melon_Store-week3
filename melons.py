@@ -1,4 +1,5 @@
 import csv
+from pprint import pprint
 
 
 
@@ -34,7 +35,7 @@ with open("melons.csv") as csvfile:
         
         
 # print(row)   
-print(melon_dict)
+pprint(melon_dict)
 
 def get_by_id(melon_id):
     return melon_dict[melon_id]

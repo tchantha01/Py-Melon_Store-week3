@@ -3,7 +3,7 @@
 {% block body %}
 
     <h1>My Shopping Cart</h1>
-    <table class="table table-striped mt-3">
+    <table class="table table-success table-hover">
         <thead>
         <tr>
             <th>Melon Name</th>
@@ -27,5 +27,5 @@
 
     <h3>Total: ${{ "%0.2f" | format(order_total) }}</h3>                
     
-    <a href="/empty-cart" class="btn btn-primary">Empty Cart</a>
+    <a href="/empty-cart" class="btn btn-outline-primary">Empty Cart</a>
 {% endblock %}    
